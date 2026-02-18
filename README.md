@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🕐 Intratime Killer
 
-## Getting Started
+Aplicación web para automatizar los fichajes laborales de forma sencilla. Permite configurar horarios semanales y registrar fichajes automáticamente en Intratime.
 
-First, run the development server:
+![Intratime Killer](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-4-38B2AC?style=flat-square&logo=tailwind-css)
+
+## ✨ Características
+
+- 📅 **Configuración Semanal**: Configura tus horarios de entrada, salida y pausas para toda la semana
+- 📊 **Historial de Fichajes**: Consulta tus fichajes registrados en un calendario interactivo
+- ⚙️ **Configuración de Usuario**: Personaliza tu jornada laboral semanal
+- 🔐 **Autenticación**: Sistema de login con credenciales de Intratime
+- 📱 **Responsive**: Diseño adaptable a cualquier dispositivo
+
+## 🚀 Inicio Rápido
+
+### Prerrequisitos
+
+- Node.js 18+ 
+- npm o yarn
+
+### Instalación
 
 ```bash
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/intratime-killer.git
+cd intratime-killer
+
+# Instalar dependencias
+npm install
+
+# Iniciar servidor de desarrollo
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Credenciales Demo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Para probar la aplicación sin conectar a Intratime:
+- **Usuario**: `demo`
+- **Contraseña**: `1234`
 
-## Learn More
+## 📁 Estructura del Proyecto
 
-To learn more about Next.js, take a look at the following resources:
+```
+├── app/                    # Páginas de Next.js (App Router)
+│   ├── page.tsx           # Login
+│   ├── semana/            # Configuración semanal
+│   ├── historial/         # Historial de fichajes
+│   └── usuario/           # Configuración de usuario
+├── components/            # Componentes React
+│   ├── ui/               # Componentes shadcn/ui
+│   ├── Header.tsx        # Navegación
+│   ├── Layout.tsx        # Layout principal
+│   └── DayRow.tsx        # Fila de día semanal
+├── contexts/             # Contextos React
+│   └── AuthContext.tsx   # Autenticación
+├── services/             # Servicios y API
+│   └── api.ts           # Cliente API Intratime
+├── types/                # Tipos TypeScript
+│   └── intratime.ts     # Interfaces
+└── lib/                  # Utilidades
+    └── utils.ts         # Helpers
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Stack Tecnológico
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Framework**: Next.js 16 (App Router)
+- **Lenguaje**: TypeScript
+- **Estilos**: Tailwind CSS v4
+- **Componentes UI**: shadcn/ui
+- **Iconos**: Lucide React
+- **Fechas**: date-fns
+- **Notificaciones**: Sonner
+- **Fuentes**: Inter & Inter Tight
 
-## Deploy on Vercel
+## 📚 API de Intratime
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+La aplicación está preparada para conectarse a la API de Intratime:
+- Documentación: https://apidocs.intratime.es/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔧 Comandos Disponibles
+
+```bash
+npm run dev      # Servidor de desarrollo
+npm run build    # Compilar para producción
+npm run start    # Iniciar servidor de producción
+npm run lint     # Ejecutar linter
+```
+
+## 📄 Licencia
+
+MIT
